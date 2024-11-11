@@ -212,3 +212,26 @@ function Operar() {
             break;
     }
 }
+
+function verStatus() {
+    console.log(iphone16.Status())
+    console.log(pcGamer.Status())
+    console.log(tvOled85.Status())
+}
+
+let loop = true
+while (loop) {
+
+    Operar()
+
+    let allStatus = Number(prompt("Deseja ver o Status atual de todos os dispositivos :   1: sim | 2: não"))
+
+    if (allStatus === 1) {
+        verStatus()
+    }
+
+    let loopEnd = Number(prompt("Deseja continuar fazendo alterações nos dispositivos:   1: sim | 2: não"))
+    if (loopEnd != 1) {
+        loop = false
+    }
+}
