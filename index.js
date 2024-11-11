@@ -128,4 +128,87 @@ class Televisor extends Dispositivo {
     }
 }
 
+let iphone16 = new Smartphone()
+let pcGamer = new Computador()
+let tvOled85 = new Televisor()
 
+
+function Operar() {
+
+    let opcao = Number(prompt("Qual o seu dispositivo:   1: Smartphone | 2: Computador | 3: Televisor"))
+
+    switch (opcao) {
+        case 1:
+            let opcao1 = Number(prompt("Oque deseja fazer:   1: Ligar | 2: Desligar | 3: Ligar Modo Avião"))
+
+            switch (opcao1) {
+                case 1:
+                    iphone16.Ligar()
+                    break;
+
+                case 2:
+                    iphone16.Desligar()
+                    break;
+
+                case 3:
+                    iphone16.LigarModoAviao()
+                    break;
+
+                default:
+                    alert("Opção Inválida")
+                    break;
+            }
+
+            break;
+
+        case 2:
+            let opcao2 = Number(prompt("Oque deseja fazer:   1: Ligar | 2: Desligar | 3: Reiniciar"))
+
+            switch (opcao2) {
+                case 1:
+                    pcGamer.Ligar()
+                    break;
+
+                case 2:
+                    pcGamer.Desligar()
+                    break;
+
+                case 3:
+                    pcGamer.reiniciar()
+                    break;
+
+                default:
+                    alert("Opção Inválida")
+                    break;
+            }
+
+            break;
+
+        case 3:
+            let opcao3 = Number(prompt("Oque deseja fazer:   1: Ligar | 2: Desligar | 3: Mudar Canal"))
+
+            switch (opcao3) {
+                case 1:
+                    tvOled85.Ligar()
+                    break;
+
+                case 2:
+                    tvOled85.Desligar()
+                    break;
+
+                case 3:
+                    tvOled85.mudarCanal()
+                    break;
+
+                default:
+                    alert("Opção Inválida")
+                    break;
+            }
+
+            break;
+
+        default:
+            alert("Opção Inválida")
+            break;
+    }
+}
